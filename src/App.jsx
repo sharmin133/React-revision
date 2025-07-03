@@ -4,6 +4,7 @@ import ToDo from './ToDo'
 import Person from './Person'
 import Singer from './Singer';
 import Counter from './Counter';
+import Batsman from './Batsman';
 
 function App() {
 
@@ -23,7 +24,8 @@ function App() {
     <>
       
       <h1>React core concept</h1>
-      <Counter></Counter>
+      <Batsman></Batsman>
+      {/* <Counter></Counter> */}
 {/* 
       <button onClick={handleClick} >Click me</button>
 
