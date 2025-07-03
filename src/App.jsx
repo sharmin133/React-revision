@@ -2,18 +2,27 @@
 import './App.css'
 import ToDo from './ToDo'
 import Person from './Person'
+import Singer from './Singer';
 
 function App() {
 
-const persons=['halim','miti','nisi','kabir']
+// const persons=['halim','miti','nisi','kabir'];
+const singers=[
+  {name:'sharmin', age:24, subject:'science'}
+]
   return (
     <>
       
       <h1>React core concept</h1>
 
-      {
+      {/* {
         persons.map(person=><Person person={person} ></Person>)
+      } */}
+      {
+        singers.map(singer =><Singer key={singer.id} singer={singer}></Singer>)
       }
+
+
       {/* <ToDo task='learn react' isDone={true}  ></ToDo>
          <ToDo task='learn javascript' isDone={false}  ></ToDo>
             <ToDo task='learn python' isDone={true}  ></ToDo> */}
@@ -23,6 +32,8 @@ const persons=['halim','miti','nisi','kabir']
       <Cricket name='tamim' runs='5000' event='stadium'  ></Cricket>
     <Cricket name='musi' runs='4560' event='stadium'  ></Cricket>
     <Cricket name='sakib' runs='4500' event='stadium'  ></Cricket> */}
+
+
     </>
   )
 }
