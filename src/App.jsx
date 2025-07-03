@@ -3,17 +3,18 @@ import './App.css'
 import ToDo from './ToDo'
 import Person from './Person'
 import Singer from './Singer';
+import Counter from './Counter';
 
 function App() {
 
-  const handleClick=()=>{
-    alert('successfully clicked')
-  }
+  // const handleClick=()=>{
+  //   alert('successfully clicked')
+  // }
 
-  const handleClick2=(num)=>{
-    const newNum=num+10;
-    alert(newNum);
-  }
+  // const handleClick2=(num)=>{
+  //   const newNum=num+10;
+  //   alert(newNum);
+  // }
 // const persons=['halim','miti','nisi','kabir'];
 // const singers=[
 //   {name:'sharmin', age:24, subject:'science'}
@@ -22,10 +23,11 @@ function App() {
     <>
       
       <h1>React core concept</h1>
-
+      <Counter></Counter>
+{/* 
       <button onClick={handleClick} >Click me</button>
 
-      <button onClick={()=> handleClick2(2)} >Click me 2</button>
+      <button onClick={()=> handleClick2(2)} >Click me 2</button> */}
 
       {/* {
         persons.map(person=><Person person={person} ></Person>)
