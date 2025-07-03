@@ -1,5 +1,6 @@
 
 import './App.css'
+import ToDo from './ToDo'
 
 function App() {
 
@@ -7,13 +8,16 @@ function App() {
   return (
     <>
       
-      <h1>Vite + React</h1>
-      <Person name='sharmin' tech='javascript'></Person>
+      <h1>React core concept</h1>
+      <ToDo task='learn react' isDone={true}  ></ToDo>
+         <ToDo task='learn javascript' isDone={false}  ></ToDo>
+            <ToDo task='learn python' isDone={true}  ></ToDo>
+      {/* <Person name='sharmin' tech='javascript'></Person>
        <Person name='shamima' tech='pyhton'></Person>
       <Pet></Pet>
       <Cricket name='tamim' runs='5000' event='stadium'  ></Cricket>
     <Cricket name='musi' runs='4560' event='stadium'  ></Cricket>
-    <Cricket name='sakib' runs='4500' event='stadium'  ></Cricket>
+    <Cricket name='sakib' runs='4500' event='stadium'  ></Cricket> */}
     </>
   )
 }
