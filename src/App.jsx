@@ -6,21 +6,33 @@ import Singer from './Singer';
 
 function App() {
 
+  const handleClick=()=>{
+    alert('successfully clicked')
+  }
+
+  const handleClick2=(num)=>{
+    const newNum=num+10;
+    alert(newNum);
+  }
 // const persons=['halim','miti','nisi','kabir'];
-const singers=[
-  {name:'sharmin', age:24, subject:'science'}
-]
+// const singers=[
+//   {name:'sharmin', age:24, subject:'science'}
+// ]
   return (
     <>
       
       <h1>React core concept</h1>
 
+      <button onClick={handleClick} >Click me</button>
+
+      <button onClick={()=> handleClick2(2)} >Click me 2</button>
+
       {/* {
         persons.map(person=><Person person={person} ></Person>)
       } */}
-      {
+      {/* {
         singers.map(singer =><Singer key={singer.id} singer={singer}></Singer>)
-      }
+      } */}
 
 
       {/* <ToDo task='learn react' isDone={true}  ></ToDo>
