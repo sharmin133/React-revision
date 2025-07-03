@@ -8,17 +8,35 @@ function App() {
     <>
       
       <h1>Vite + React</h1>
-      <Person></Person>
+      <Person name='sharmin' tech='javascript'></Person>
+       <Person name='shamima' tech='pyhton'></Person>
+      <Pet></Pet>
     
     </>
   )
 }
 
 
-function Person(){
+function Person(props){
   return(
-    <h2>i am student</h2>
+   <div>
+     <h2>i am student {props.name}  </h2>
+    <p>she is use {props.tech}</p>
+   </div>
   )
 }
 
+
+
+function Pet(){
+  return(
+    <div>
+      <h2>Favorite</h2>
+    <ul>
+      <li>dog</li>
+    <li>cat</li>
+    </ul>
+    </div>
+  )
+}
 export default App
