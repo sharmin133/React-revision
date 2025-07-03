@@ -11,7 +11,9 @@ function App() {
       <Person name='sharmin' tech='javascript'></Person>
        <Person name='shamima' tech='pyhton'></Person>
       <Pet></Pet>
-    
+      <Cricket name='tamim' runs='5000' event='stadium'  ></Cricket>
+    <Cricket name='musi' runs='4560' event='stadium'  ></Cricket>
+    <Cricket name='sakib' runs='4500' event='stadium'  ></Cricket>
     </>
   )
 }
@@ -36,6 +38,17 @@ function Pet(){
       <li>dog</li>
     <li>cat</li>
     </ul>
+    </div>
+  )
+}
+
+
+function Cricket ({name,runs,event}){
+  return(
+    <div>
+      <h2>player name is {name} </h2>
+      <p>total run {runs} </p>
+      <p>event is  {event}</p>
     </div>
   )
 }
