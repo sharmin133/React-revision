@@ -1,17 +1,22 @@
 
 import './App.css'
 import ToDo from './ToDo'
+import Person from './Person'
 
 function App() {
 
-
+const persons=['halim','miti','nisi','kabir']
   return (
     <>
       
       <h1>React core concept</h1>
-      <ToDo task='learn react' isDone={true}  ></ToDo>
+
+      {
+        persons.map(person=><Person person={person} ></Person>)
+      }
+      {/* <ToDo task='learn react' isDone={true}  ></ToDo>
          <ToDo task='learn javascript' isDone={false}  ></ToDo>
-            <ToDo task='learn python' isDone={true}  ></ToDo>
+            <ToDo task='learn python' isDone={true}  ></ToDo> */}
       {/* <Person name='sharmin' tech='javascript'></Person>
        <Person name='shamima' tech='pyhton'></Person>
       <Pet></Pet>
@@ -23,14 +28,14 @@ function App() {
 }
 
 
-function Person(props){
-  return(
-   <div>
-     <h2>i am student {props.name}  </h2>
-    <p>she is use {props.tech}</p>
-   </div>
-  )
-}
+// function Person(props){
+//   return(
+//    <div>
+//      <h2>i am student {props.name}  </h2>
+//     <p>she is use {props.tech}</p>
+//    </div>
+//   )
+// }
 
 
 
