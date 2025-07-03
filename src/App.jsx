@@ -5,87 +5,54 @@ import Person from './Person'
 import Singer from './Singer';
 import Counter from './Counter';
 import Batsman from './Batsman';
+import Fetch from './Fetch';
+import Users from './Users';
+import { Suspense, useEffect, useState } from 'react';
+import Friend from './Friend';
+
+
+  // const friendsFetch=async()=>{
+  // const res=await fetch('https://jsonplaceholder.typicode.com/users');
+  // return res.json();
+
+  // }
 
 function App() {
 
-  // const handleClick=()=>{
-  //   alert('successfully clicked')
-  // }
+const [users,SetUsers]=useState([])
+  useEffect(()=>{
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then(res=>res.json())
+    .then(data=>SetUsers(data))
+  },[])
+  // const friendsPromise=friendsFetch();
+  
 
-  // const handleClick2=(num)=>{
-  //   const newNum=num+10;
-  //   alert(newNum);
-  // }
-// const persons=['halim','miti','nisi','kabir'];
-// const singers=[
-//   {name:'sharmin', age:24, subject:'science'}
-// ]
+  // const fetchUsersData=fetch('https://jsonplaceholder.typicode.com/users')
+  // .then(res=>res.json())
+ 
   return (
     <>
       
       <h1>React core concept</h1>
-      <Batsman></Batsman>
-      {/* <Counter></Counter> */}
+      <h2>users:{users.length}</h2>
+
+      {
+        users.map(friend=><Friend friend={friend} ></Friend>)
+      }
 {/* 
-      <button onClick={handleClick} >Click me</button>
+      <Suspense fallback={<h2>all my friends...</h2>} >
+        <Users friendsPromise={friendsPromise} ></Users>
+      </Suspense> */}
+        {/* <Suspense fallback={<h3>loading...</h3>} >
+             <Users fetchUsersData={fetchUsersData} ></Users>
+        </Suspense> */}
 
-      <button onClick={()=> handleClick2(2)} >Click me 2</button> */}
-
-      {/* {
-        persons.map(person=><Person person={person} ></Person>)
-      } */}
-      {/* {
-        singers.map(singer =><Singer key={singer.id} singer={singer}></Singer>)
-      } */}
-
-
-      {/* <ToDo task='learn react' isDone={true}  ></ToDo>
-         <ToDo task='learn javascript' isDone={false}  ></ToDo>
-            <ToDo task='learn python' isDone={true}  ></ToDo> */}
-      {/* <Person name='sharmin' tech='javascript'></Person>
-       <Person name='shamima' tech='pyhton'></Person>
-      <Pet></Pet>
-      <Cricket name='tamim' runs='5000' event='stadium'  ></Cricket>
-    <Cricket name='musi' runs='4560' event='stadium'  ></Cricket>
-    <Cricket name='sakib' runs='4500' event='stadium'  ></Cricket> */}
-
+     
 
     </>
   )
 }
 
 
-// function Person(props){
-//   return(
-//    <div>
-//      <h2>i am student {props.name}  </h2>
-//     <p>she is use {props.tech}</p>
-//    </div>
-//   )
-// }
-
-
-
-function Pet(){
-  return(
-    <div>
-      <h2>Favorite</h2>
-    <ul>
-      <li>dog</li>
-    <li>cat</li>
-    </ul>
-    </div>
-  )
-}
-
-
-function Cricket ({name,runs,event}){
-  return(
-    <div>
-      <h2>player name is {name} </h2>
-      <p>total run {runs} </p>
-      <p>event is  {event}</p>
-    </div>
-  )
-}
 export default App
